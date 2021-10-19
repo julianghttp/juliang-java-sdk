@@ -1,0 +1,57 @@
+package com.juliang.common;
+
+/**
+ * 独享代理 -- 设置IP白名单
+ */
+public class AloneSetWhiteIp {
+
+    /**
+     * 业务号
+     */
+    private String trade_no;
+    /**
+     * IP列表列表
+     */
+    private String ips;
+
+    /**
+     * 获取业务编号
+     * @return  业务编号
+     */
+    public String getTrade_no() {
+        return trade_no;
+    }
+
+    /**
+     * 设置业务编号
+     * @param trade_no 业务编号
+     * @return
+     */
+    public AloneSetWhiteIp setTrade_no(String trade_no) {
+        this.trade_no = trade_no;
+        return this;
+    }
+
+    /**
+     * 获取IP列表
+     * @return IP列表
+     */
+    public String getIps() {
+        return ips;
+    }
+
+    /**
+     * 设置IP列表
+     * @param ips IP列表
+     * @return
+     */
+    public AloneSetWhiteIp setIps(String ips) {
+        this.ips = ips;
+        return this;
+    }
+
+    public AloneSetWhiteIp() {
+
+
+    }
+}
