@@ -2,7 +2,6 @@ package com.juliang.ext;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.crypto.SecureUtil;
-import com.juliang.common.Auth;
 
 import java.net.URLEncoder;
 import java.util.*;
@@ -15,9 +14,9 @@ public class StrKit {
     /**
      * 计算签名
      *
-     * @param object
-     * @param appKey
-     * @return
+     * @param object 对象
+     * @param appKey 秘钥
+     * @return 请求参数
      * @throws IllegalAccessException
      */
     public static Map<String, Object> getParams(Object object, String appKey) throws IllegalAccessException {

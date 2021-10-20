@@ -2,11 +2,21 @@ package com.juliang.common;
 
 import jakarta.validation.constraints.NotBlank;
 
+import lombok.Data;
+import lombok.experimental.Accessors;
+
 /**
  * 动态代理--设置IP白名单
  */
+@Data
+@Accessors(chain = true)
 public class DynamicSetWhiteIp {
 
+    /**
+     * key 业务秘钥
+     */
+    @NotBlank(message = "秘钥不能为空")
+    private String key;
     /**
      * 业务编号
      */
@@ -15,45 +25,7 @@ public class DynamicSetWhiteIp {
     /**
      * IP列表
      */
+    @NotBlank(message = "IP列表不能为空")
     private String ips;
 
-    /**
-     * 获取业务编号
-     * @return 业务编号
-     */
-    public String getTradeNO() {
-        return trade_no;
-    }
-
-    /**
-     * 设置业务编号
-     * @param tradeNO 业务编号
-     * @return
-     */
-    public DynamicSetWhiteIp setTradeNO(String tradeNO) {
-        this.trade_no = tradeNO;
-        return this;
-    }
-
-    /**
-     * 获取IP列表
-     * @return IP列表
-     */
-    public String getIps() {
-        return ips;
-    }
-
-    /**
-     * 设置IP列表
-     * @param ips IP列表
-     * @return
-     */
-    public DynamicSetWhiteIp setIps(String ips) {
-        this.ips = ips;
-        return this;
-    }
-
-    public DynamicSetWhiteIp() {
-
-    }
 }

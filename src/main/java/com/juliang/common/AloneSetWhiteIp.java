@@ -2,59 +2,29 @@ package com.juliang.common;
 
 import jakarta.validation.constraints.NotBlank;
 
+import lombok.Data;
+import lombok.experimental.Accessors;
+
 /**
  * 独享代理 -- 设置IP白名单
  */
+@Data
+@Accessors(chain = true)
 public class AloneSetWhiteIp {
 
+    /**
+     * key 业务秘钥
+     */
+    @NotBlank(message = "秘钥不能为空")
+    private String key;
     /**
      * 业务号
      */
     @NotBlank(message = "业务编号必传")
     private String trade_no;
     /**
-     * IP列表列表
+     * IP列表
      */
+    @NotBlank(message = "IP列表不能为空")
     private String ips;
-
-    /**
-     * 获取业务编号
-     * @return  业务编号
-     */
-    public String getTradeNo() {
-        return trade_no;
-    }
-
-    /**
-     * 设置业务编号
-     * @param trade_no 业务编号
-     * @return
-     */
-    public AloneSetWhiteIp setTradeNo(String trade_no) {
-        this.trade_no = trade_no;
-        return this;
-    }
-
-    /**
-     * 获取IP列表
-     * @return IP列表
-     */
-    public String getIps() {
-        return ips;
-    }
-
-    /**
-     * 设置IP列表
-     * @param ips IP列表
-     * @return
-     */
-    public AloneSetWhiteIp setIps(String ips) {
-        this.ips = ips;
-        return this;
-    }
-
-    public AloneSetWhiteIp() {
-
-
-    }
 }

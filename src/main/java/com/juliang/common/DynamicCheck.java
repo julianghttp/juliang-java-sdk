@@ -2,11 +2,23 @@ package com.juliang.common;
 
 import jakarta.validation.constraints.NotBlank;
 
+import lombok.Data;
+import lombok.experimental.Accessors;
+
 /**
  * 动态代理--检查代理IP可用性
  */
+@Data
+@Accessors(chain = true)
 public class DynamicCheck {
 
+
+
+    /**
+     * key 业务秘钥
+     */
+    @NotBlank(message = "秘钥不能为空")
+    private String key;
     /**
      * 业务号
      */
@@ -15,46 +27,8 @@ public class DynamicCheck {
     /**
      * 代理列表
      */
+    @NotBlank(message = "代理列表不能为空")
     private String proxy;
 
-    /**
-     * 获取业务号
-     * @return 业务号
-     */
-    public String getTradeNo() {
-        return trade_no;
-    }
 
-    /**
-     * 设置业务号
-     * @param tradeNo  业务号
-     * @return
-     */
-    public DynamicCheck setTradeNo(String tradeNo) {
-        this.trade_no = tradeNo;
-        return this;
-    }
-
-    /**
-     * 获取代理列表
-     * @return  代理列表
-     */
-    public String getProxy() {
-        return proxy;
-    }
-
-    /**
-     * 设置代理列表
-     * @param proxy 代理列表
-     * @return
-     */
-    public DynamicCheck setProxy(String proxy) {
-        this.proxy = proxy;
-        return this;
-
-    }
-
-    public DynamicCheck() {
-
-    }
 }

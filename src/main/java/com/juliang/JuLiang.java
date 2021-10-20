@@ -121,7 +121,7 @@ public class JuLiang {
      */
     public String aloneGetWhiteIp(AloneGetWhiteIp aloneGetWhiteIp,String appkey) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(aloneGetWhiteIp, appkey);
-        return HttpUtil.post(URL.ALONE_GETIPS.getValue(), params);
+        return HttpUtil.post(URL.ALONE_GETWHITEIP.getValue(), params);
     }
 
     /**
