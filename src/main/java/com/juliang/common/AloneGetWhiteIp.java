@@ -1,9 +1,12 @@
 package com.juliang.common;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class AloneGetWhiteIp {
     /**
      * 业务号
      */
+    @NotBlank(message = "业务编号必传")
     private String trade_no;
 
     /**

@@ -1,10 +1,13 @@
 package com.juliang.common;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class UsersGetBalance {
 
     /**
      * 用户Id
      */
+    @NotBlank(message = "用户id必传")
     private Integer user_id;
 
     /**

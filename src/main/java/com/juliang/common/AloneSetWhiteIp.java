@@ -1,5 +1,7 @@
 package com.juliang.common;
 
+import jakarta.validation.constraints.NotBlank;
+
 /**
  * 独享代理 -- 设置IP白名单
  */
@@ -8,6 +10,7 @@ public class AloneSetWhiteIp {
     /**
      * 业务号
      */
+    @NotBlank(message = "业务编号必传")
     private String trade_no;
     /**
      * IP列表列表

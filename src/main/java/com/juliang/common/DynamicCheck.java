@@ -1,5 +1,7 @@
 package com.juliang.common;
 
+import jakarta.validation.constraints.NotBlank;
+
 /**
  * 动态代理--检查代理IP可用性
  */
@@ -8,6 +10,7 @@ public class DynamicCheck {
     /**
      * 业务号
      */
+    @NotBlank(message = "业务编号必传")
     private String trade_no;
     /**
      * 代理列表

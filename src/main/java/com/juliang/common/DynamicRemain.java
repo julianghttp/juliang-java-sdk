@@ -1,5 +1,7 @@
 package com.juliang.common;
 
+import jakarta.validation.constraints.NotBlank;
+
 /**
  * 动态代理--获取代理剩余可用时长
  */
@@ -8,6 +10,7 @@ public class DynamicRemain {
     /**
      * 业务编号
      */
+    @NotBlank(message = "业务编号必传")
     private String trade_no;
     /**
      * 代理列表
