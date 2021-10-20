@@ -1,5 +1,7 @@
 package com.juliang.ext;
 
+import cn.hutool.core.util.StrUtil;
+
 import java.lang.reflect.Field;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -20,6 +22,9 @@ public class ObjectKit {
         for (Field field : clazz.getDeclaredFields()) {
             field.setAccessible(true);
             String fieldName = field.getName();
+            if (StrUtil.equals(fieldName, "key")) {
+                continue;
+            }
             Object value = field.get(obj);
             if (value == null) {
                 value = "";

@@ -34,8 +34,8 @@ public enum URL {
     ALONE_GETWHITEIP("/v1/alone/getwhiteip");
 
 
-    private static final String DOMAIN = "http://192.168.10.60:8087";
-//    private static final String DOMAIN = "http://v1.api.juliangip.com";
+//    private static final String DOMAIN = "http://192.168.10.60:8087";
+    private static final String DOMAIN = "http://v1.api.juliangip.com";
 
     private String value;
 
