@@ -16,15 +16,15 @@ public class StrKit {
      * 计算签名
      *
      * @param object
-     * @param auth
+     * @param appKey
      * @return
      * @throws IllegalAccessException
      */
-    public static Map<String, Object> getParams(Object object, Auth auth) throws IllegalAccessException {
+    public static Map<String, Object> getParams(Object object, String appKey) throws IllegalAccessException {
         Map<String, Object> params = ObjectKit.getObjectToMap(object);
         Map<String, Object> cleanParams = StrKit.cleanParams(params);
         String value = StrKit.formatUrlMap(cleanParams, false, false);
-        value = value + "&key=" + auth.getAppKey();
+        value = value + "&key=" + appKey;
         String sign = SecureUtil.md5(value);
         cleanParams.put("sign", sign);
         return cleanParams;

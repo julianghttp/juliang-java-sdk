@@ -1,7 +1,6 @@
 package com.juliang;
 
 import cn.hutool.http.HttpUtil;
-import com.juliang.common.Auth;
 import com.juliang.common.DynamicGetIps;
 import com.juliang.enums.URL;
 import com.juliang.ext.StrKit;
@@ -10,11 +9,6 @@ import java.util.Map;
 
 public class JuLiang {
 
-    private Auth auth;
-
-    public JuLiang(Auth auth) {
-        this.auth = auth;
-    }
 
     /**
      * 提取动态代理
@@ -24,12 +18,8 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public String dynamicGetIps(DynamicGetIps dynamicGetIps) throws IllegalAccessException {
-        if (auth == null) {
-            return "请先实例化Auth对象";
-        }
-        dynamicGetIps.setTradeNo(auth.getAppId());
-        Map<String, Object> params = StrKit.getParams(dynamicGetIps, auth);
+    public static String dynamicGetIps(DynamicGetIps dynamicGetIps,@NOTNULL String appkey) throws IllegalAccessException {
+        Map<String, Object> params = StrKit.getParams(dynamicGetIps, appkey);
         return HttpUtil.post(URL.DYNAMIC_GETIPS.getValue(), params);
     }
 
