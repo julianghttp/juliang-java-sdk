@@ -18,7 +18,7 @@ public class AloneSetWhiteIp {
      * 获取业务编号
      * @return  业务编号
      */
-    public String getTrade_no() {
+    public String getTradeNo() {
         return trade_no;
     }
 
@@ -27,7 +27,7 @@ public class AloneSetWhiteIp {
      * @param trade_no 业务编号
      * @return
      */
-    public AloneSetWhiteIp setTrade_no(String trade_no) {
+    public AloneSetWhiteIp setTradeNo(String trade_no) {
         this.trade_no = trade_no;
         return this;
     }

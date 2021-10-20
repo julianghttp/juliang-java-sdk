@@ -25,6 +25,8 @@ public enum URL {
     USERS_GETBALANCE("/v1/users/getbalance"),
     DYNAMIC_GETIPS("/v1/dynamic/getips"),
     DYNAMIC_CHECK("/v1/dynamic/check"),
+    DYNAMIC_SETWHITEIP("/v1/dynamic/setwhiteip"),
+    DYNAMIC_GETWHITEIP("/v1/dynamic/getwhiteip"),
     DYNAMIC_REMAIN("/v1/dynamic/remain"),
     DYNAMIC_BALANCE("/v1/dynamic/balance"),
     ALONE_GETIPS("/v1/alone/getips"),
