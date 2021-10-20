@@ -42,7 +42,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String dynamicSetWhiteIp(DynamicSetWhiteIp dynamicSetWhiteIp) throws IllegalAccessException {
+    public static String dynamicSetWhiteIp( DynamicSetWhiteIp dynamicSetWhiteIp) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(dynamicSetWhiteIp, dynamicSetWhiteIp.getKey());
         return HttpUtil.post(URL.DYNAMIC_SETWHITEIP.getValue(), params);
     }
@@ -54,7 +54,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String dynamicGetWhiteIp(DynamicGetWhiteIp dynamicGetWhiteIp) throws IllegalAccessException {
+    public static String dynamicGetWhiteIp( DynamicGetWhiteIp dynamicGetWhiteIp) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(dynamicGetWhiteIp, dynamicGetWhiteIp.getKey());
         return HttpUtil.post(URL.DYNAMIC_GETWHITEIP.getValue(), params);
     }
@@ -66,7 +66,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String dynamicRemain(DynamicRemain dynamicRemain) throws IllegalAccessException {
+    public static String dynamicRemain( DynamicRemain dynamicRemain) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(dynamicRemain, dynamicRemain.getKey());
         return HttpUtil.post(URL.DYNAMIC_REMAIN.getValue(), params);
     }
@@ -78,7 +78,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String dynamicBalance(DynamicBalance dynamicBalance) throws IllegalAccessException {
+    public static String dynamicBalance( DynamicBalance dynamicBalance) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(dynamicBalance, dynamicBalance.getKey());
         return HttpUtil.post(URL.DYNAMIC_BALANCE.getValue(), params);
     }
@@ -90,7 +90,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String usersGetBalance(UsersGetBalance usersGetBalance) throws IllegalAccessException {
+    public static String usersGetBalance( UsersGetBalance usersGetBalance) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(usersGetBalance, usersGetBalance.getKey());
         return HttpUtil.post(URL.USERS_GETBALANCE.getValue(), params);
     }
@@ -102,7 +102,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String aloneGetIps(AloneGetIps aloneGetIps) throws IllegalAccessException {
+    public static String aloneGetIps( AloneGetIps aloneGetIps) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(aloneGetIps, aloneGetIps.getKey());
         return HttpUtil.post(URL.ALONE_GETIPS.getValue(), params);
     }
@@ -114,7 +114,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String aloneSetWhiteIp(AloneSetWhiteIp aloneSetWhiteIp) throws IllegalAccessException {
+    public static String aloneSetWhiteIp( AloneSetWhiteIp aloneSetWhiteIp) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(aloneSetWhiteIp, aloneSetWhiteIp.getKey());
         return HttpUtil.post(URL.ALONE_SETWHITEIP.getValue(), params);
     }
@@ -127,7 +127,7 @@ public class JuLiang {
      * @return
      * @throws IllegalAccessException
      */
-    public static String aloneGetWhiteIp(AloneGetWhiteIp aloneGetWhiteIp) throws IllegalAccessException {
+    public static String aloneGetWhiteIp( AloneGetWhiteIp aloneGetWhiteIp) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(aloneGetWhiteIp, aloneGetWhiteIp.getKey());
         return HttpUtil.post(URL.ALONE_GETWHITEIP.getValue(), params);
     }

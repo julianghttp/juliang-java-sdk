@@ -1,10 +1,7 @@
 package com.juliang.common;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.hibernate.validator.constraints.Range;
 
 /**
  * 动态代理--提取代理IP
@@ -20,12 +17,10 @@ public class DynamicGetIps {
     /**
      * 业务编号
      */
-    @NotBlank(message = "业务编号必传")
     private String trade_no;
     /**
      * 提取数量
      */
-    @Range(min = 1,max = 100)
     private Integer num;
     /**
      * 代理类型
