@@ -32,6 +32,11 @@ public class AloneGetIps {
      */
     private Integer city_code;
     /**
+     * IP可用时间
+     * 动态型独有
+     */
+    private String ip_remain;
+    /**
      * 业务到期时间
      */
     private String order_endtime;
