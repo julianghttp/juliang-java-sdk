@@ -22,16 +22,16 @@ public enum URL {
      * 3.3)独享代理--获取IP白名单
      *
      */
-    USERS_GETBALANCE("/v1/users/getbalance"),
-    DYNAMIC_GETIPS("/v1/dynamic/getips"),
-    DYNAMIC_CHECK("/v1/dynamic/check"),
-    DYNAMIC_SETWHITEIP("/v1/dynamic/setwhiteip"),
-    DYNAMIC_GETWHITEIP("/v1/dynamic/getwhiteip"),
-    DYNAMIC_REMAIN("/v1/dynamic/remain"),
-    DYNAMIC_BALANCE("/v1/dynamic/balance"),
-    ALONE_GETIPS("/v1/alone/getips"),
-    ALONE_SETWHITEIP("/v1/alone/setwhiteip"),
-    ALONE_GETWHITEIP("/v1/alone/getwhiteip");
+    USERS_GETBALANCE("/users/getbalance"),
+    DYNAMIC_GETIPS("/dynamic/getips"),
+    DYNAMIC_CHECK("/dynamic/check"),
+    DYNAMIC_SETWHITEIP("/dynamic/setwhiteip"),
+    DYNAMIC_GETWHITEIP("/dynamic/getwhiteip"),
+    DYNAMIC_REMAIN("/dynamic/remain"),
+    DYNAMIC_BALANCE("/dynamic/balance"),
+    ALONE_GETIPS("/alone/getips"),
+    ALONE_SETWHITEIP("/alone/setwhiteip"),
+    ALONE_GETWHITEIP("/alone/getwhiteip");
 
 
 //    private static final String DOMAIN = "http://192.168.10.60:8087";
