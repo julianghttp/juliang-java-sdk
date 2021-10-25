@@ -35,7 +35,7 @@ public enum URL {
 
 
 //    private static final String DOMAIN = "http://192.168.10.60:8087";
-    private static final String DOMAIN = "http://v1.api.juliangip.com";
+    private static final String DOMAIN = "https://v1.api.juliangip.com";
 
     private String value;
 
