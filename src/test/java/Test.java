@@ -5,14 +5,14 @@ import java.util.Map;
 
 public class Test {
 
-    private static String userId = "your User ID";
-    private static String AccessKey = "User AccessKey";
+    private  String userId = "your User ID";
+    private  String AccessKey = "User AccessKey";
 
-    private static String dynamicKey = "e90222dfd88f48e7b02abf39b2d10b7b";
-    private static String dynamicTradeNo = "1135123858735679";
+    private  String dynamicKey = "dynamicKey";
+    private  String dynamicTradeNo = "dynamicTradeNo";
 
-    private static String aloneTradeNo = "4058562701502429";
-    private static String aloneKey = "71fc78683e6d41069d14ef563c9518ba";
+    private  String aloneTradeNo = "aloneTradeNo";
+    private  String aloneKey = "aloneKey";
 
 
     /**
@@ -70,6 +70,16 @@ public class Test {
     }
 
     /**
+     * 动态代理 -- 替换代理Ip白名单
+     * @throws IllegalAccessException
+     */
+    @org.junit.jupiter.api.Test
+    public void dyReplaceWhiteIp() throws IllegalAccessException {
+        String resp = JuLiang.dynamicReplaceWhiteIp(new DynamicReplaceWhiteIp().setTrade_no(dynamicTradeNo).setKey(dynamicKey).setNew_ip("11.12.13.14,15.16.17.18").setOld_ip("3.3.3.9").setReset("1"));
+        System.out.println(resp);
+    }
+
+    /**
      * 动态代理 -- 业务代理IP剩余数量
      * @throws IllegalAccessException
      * 返回示例 {"msg":"成功","code":200,"data":{"balance":4999880}}
@@ -85,7 +95,7 @@ public class Test {
      * @throws IllegalAccessException
      */
     @org.junit.jupiter.api.Test
-    public static void dynamicremain() throws IllegalAccessException {
+    public  void dynamicremain() throws IllegalAccessException {
         String value = JuLiang.dynamicRemain(new DynamicRemain().setTrade_no(dynamicTradeNo).setKey(dynamicKey).setProxy("1.1.1.1:8082"));
         System.out.println(value);
     }
@@ -96,7 +106,7 @@ public class Test {
      * @throws IllegalAccessException
      */
     @org.junit.jupiter.api.Test
-    public static void alonegetwhiteip() throws IllegalAccessException {
+    public  void alonegetwhiteip() throws IllegalAccessException {
         String value = JuLiang.aloneGetWhiteIp(new AloneGetWhiteIp().setTrade_no(aloneTradeNo).setKey(aloneKey));
         System.out.println(value);
     }
@@ -106,7 +116,7 @@ public class Test {
      * @throws IllegalAccessException
      */
     @org.junit.jupiter.api.Test
-    public static void setwhiteip() throws IllegalAccessException {
+    public  void setwhiteip() throws IllegalAccessException {
         String value = JuLiang.aloneSetWhiteIp(new AloneSetWhiteIp().setTrade_no(aloneTradeNo).setKey(aloneKey).setIps("10.10.10.10"));
         System.out.println(value);
     }
@@ -116,9 +126,19 @@ public class Test {
      * @throws IllegalAccessException
      */
     @org.junit.jupiter.api.Test
-    public static void alonegetips() throws IllegalAccessException {
+    public  void alonegetips() throws IllegalAccessException {
         String value = JuLiang.aloneGetIps(new AloneGetIps().setTrade_no(aloneTradeNo).setKey(aloneKey));
         System.out.println(value);
+    }
+
+    /**
+     * 独享代理 -- 替换代理IP白名单
+     * @throws IllegalAccessException
+     */
+    @org.junit.jupiter.api.Test
+    public void aloneReplaceWhiteIp() throws IllegalAccessException {
+        String resp = JuLiang.aloneReplaceWhiteIp(new AloneReplaceWhiteIp().setTrade_no(aloneTradeNo).setKey(aloneKey).setNew_ip("11.12.13.14,15.16.17.18").setOld_ip("3.3.3.9").setReset("1"));
+        System.out.println(resp);
     }
 
 }

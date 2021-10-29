@@ -27,14 +27,16 @@ public enum URL {
     DYNAMIC_CHECK("/dynamic/check"),
     DYNAMIC_SETWHITEIP("/dynamic/setwhiteip"),
     DYNAMIC_GETWHITEIP("/dynamic/getwhiteip"),
+    DYNAMIC_REPLACEWHITEIP("/dynamic/replaceWhiteIp"),
     DYNAMIC_REMAIN("/dynamic/remain"),
     DYNAMIC_BALANCE("/dynamic/balance"),
     ALONE_GETIPS("/alone/getips"),
     ALONE_SETWHITEIP("/alone/setwhiteip"),
-    ALONE_GETWHITEIP("/alone/getwhiteip");
+    ALONE_GETWHITEIP("/alone/getwhiteip"),
+    ALONE_REPLACEWHITEIP("/alone/replaceWhiteIp");
 
 
-//    private static final String DOMAIN = "http://192.168.10.60:8087";
+    //private static final String DOMAIN = "http://192.168.10.51:8087";
     private static final String DOMAIN = "https://v1.api.juliangip.com";
 
     private String value;

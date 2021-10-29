@@ -60,6 +60,17 @@ public class JuLiang {
     }
 
     /**
+     * 动态代理 -- 替换IP白名单
+     * @param dynamicReplaceWhiteIp 白名单替换请求对象
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static String dynamicReplaceWhiteIp(DynamicReplaceWhiteIp dynamicReplaceWhiteIp) throws IllegalAccessException {
+        Map<String,Object> params = StrKit.getParams(dynamicReplaceWhiteIp,dynamicReplaceWhiteIp.getKey());
+        return HttpUtil.post(URL.DYNAMIC_REPLACEWHITEIP.getValue(), params);
+    }
+
+    /**
      * 动态代理 -- 获取代理剩余可用时长
      *
      * @param dynamicRemain 获取代理剩余可用时长请求对象
@@ -131,6 +142,18 @@ public class JuLiang {
         Map<String, Object> params = StrKit.getParams(aloneGetWhiteIp, aloneGetWhiteIp.getKey());
         return HttpUtil.post(URL.ALONE_GETWHITEIP.getValue(), params);
     }
+
+    /**
+     * 独享代理 -- 替换IP白名单
+     * @param aloneReplaceWhiteIp
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static String aloneReplaceWhiteIp(AloneReplaceWhiteIp aloneReplaceWhiteIp) throws IllegalAccessException {
+        Map<String,Object> params = StrKit.getParams(aloneReplaceWhiteIp,aloneReplaceWhiteIp.getKey());
+        return HttpUtil.post(URL.ALONE_REPLACEWHITEIP.getValue(), params);
+    }
+
 
 
 }
