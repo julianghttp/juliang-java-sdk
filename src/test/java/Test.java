@@ -25,6 +25,12 @@ public class Test {
         System.out.println(money);
     }
 
+    @org.junit.jupiter.api.Test
+    public void usersGetAllOrders() throws IllegalAccessException {
+        String orderList = JuLiang.getAllOrders(new UsersGetAllOrders().setKey(AccessKey).setUser_id(userId).setProduct_type(4));
+        System.out.println(orderList);
+    }
+
     /**
      * 动态代理 -- 提取代理iP
      * @throws IllegalAccessException

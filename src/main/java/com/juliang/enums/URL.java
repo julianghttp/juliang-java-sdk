@@ -23,6 +23,7 @@ public enum URL {
      *
      */
     USERS_GETBALANCE("/users/getbalance"),
+    USERS_GETALLORDERS("/users/getAllOrders"),
     DYNAMIC_GETIPS("/dynamic/getips"),
     DYNAMIC_CHECK("/dynamic/check"),
     DYNAMIC_SETWHITEIP("/dynamic/setwhiteip"),
@@ -36,8 +37,8 @@ public enum URL {
     ALONE_REPLACEWHITEIP("/alone/replaceWhiteIp");
 
 
-    //private static final String DOMAIN = "http://192.168.10.51:8087";
-    private static final String DOMAIN = "https://v1.api.juliangip.com";
+    private static final String DOMAIN = "http://192.168.10.62:8087";
+    //private static final String DOMAIN = "https://v1.api.juliangip.com";
 
     private String value;
 

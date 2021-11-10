@@ -11,6 +11,29 @@ public class JuLiang {
 
 
     /**
+     * 获取账户余额
+     *
+     * @param usersGetBalance 获取账户余额请求对象
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static String usersGetBalance( UsersGetBalance usersGetBalance) throws IllegalAccessException {
+        Map<String, Object> params = StrKit.getParams(usersGetBalance, usersGetBalance.getKey());
+        return HttpUtil.post(URL.USERS_GETBALANCE.getValue(), params);
+    }
+
+    /**
+     * 获取账户下对应类型的所有正常状态订单号
+     * @param usersGetAllOrders 请求参数构建对象
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static String getAllOrders(UsersGetAllOrders usersGetAllOrders)throws IllegalAccessException{
+        Map<String,Object> params = StrKit.getParams(usersGetAllOrders,usersGetAllOrders.getKey());
+        return HttpUtil.post(URL.USERS_GETALLORDERS.getValue(), params);
+    }
+
+    /**
      * 提取动态代理
      * <br/> 不需要的参数不传即可
      *
@@ -92,18 +115,6 @@ public class JuLiang {
     public static String dynamicBalance( DynamicBalance dynamicBalance) throws IllegalAccessException {
         Map<String, Object> params = StrKit.getParams(dynamicBalance, dynamicBalance.getKey());
         return HttpUtil.post(URL.DYNAMIC_BALANCE.getValue(), params);
-    }
-
-    /**
-     * 获取账户余额
-     *
-     * @param usersGetBalance 获取账户余额请求对象
-     * @return
-     * @throws IllegalAccessException
-     */
-    public static String usersGetBalance( UsersGetBalance usersGetBalance) throws IllegalAccessException {
-        Map<String, Object> params = StrKit.getParams(usersGetBalance, usersGetBalance.getKey());
-        return HttpUtil.post(URL.USERS_GETBALANCE.getValue(), params);
     }
 
     /**
