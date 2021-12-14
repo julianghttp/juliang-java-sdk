@@ -34,6 +34,17 @@ public class JuLiang {
     }
 
     /**
+     * 获取对应省份下的可用代理城市
+     * @param usersGetCity
+     * @return
+     * @throws IllegalAccessException
+     */
+    public static String getCity(UsersGetCity usersGetCity) throws IllegalAccessException {
+        Map<String, Object> params = StrKit.getParams(usersGetCity, usersGetCity.getKey());
+        return HttpUtil.post(URL.USERS_GETCITY.getValue(),params);
+    }
+
+    /**
      * 提取动态代理
      * <br/> 不需要的参数不传即可
      *

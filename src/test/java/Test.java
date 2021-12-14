@@ -6,8 +6,10 @@ import java.util.Map;
 
 public class Test {
 
-    private String userId = "your User ID";
-    private String AccessKey = "User AccessKey";
+    //private String userId = "your User ID";
+    private String userId = "1000004";
+    //private String AccessKey = "User AccessKey";
+    private String AccessKey = "8429f4da8c284948a0ab60153faad1b0";
 
     private String dynamicKey = "63dc5565bf4b449990e6f3f6f17a2883";
     private String dynamicTradeNo = "1358211746619020";
@@ -29,8 +31,14 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     public void usersGetAllOrders() throws IllegalAccessException {
-        String orderList = JuLiang.getAllOrders(new UsersGetAllOrders().setKey(AccessKey).setUser_id(userId).setProduct_type(4));
+        String orderList = JuLiang.getAllOrders(new UsersGetAllOrders().setKey(AccessKey).setUser_id(userId).setShow("1").setProduct_type(4));
         System.out.println(orderList);
+    }
+
+    @org.junit.jupiter.api.Test
+    public void usersGetCity() throws IllegalAccessException {
+        String cityInfo = JuLiang.getCity(new UsersGetCity().setKey(AccessKey).setUser_id(userId).setProvince("山东,河北"));
+        System.out.println(cityInfo);
     }
 
     @org.junit.jupiter.api.Test

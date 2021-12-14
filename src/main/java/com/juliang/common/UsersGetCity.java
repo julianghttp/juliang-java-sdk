@@ -1,16 +1,14 @@
 package com.juliang.common;
 
-
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
- * 账号相关接口
- * 获取账户下对应类型的所有正常状态订单
+ * 获取对应省份下的可用代理城市
  */
 @Data
 @Accessors(chain = true)
-public class UsersGetAllOrders {
+public class UsersGetCity {
     /**
      * key 用户秘钥
      */
@@ -20,12 +18,7 @@ public class UsersGetAllOrders {
      */
     private String user_id;
     /**
-     * 产品类型
+     * 城市名称
      */
-    private Integer product_type;
-    /**
-     * 是否展示业务秘钥
-     */
-    private String show;
-
+    private String province;
 }
