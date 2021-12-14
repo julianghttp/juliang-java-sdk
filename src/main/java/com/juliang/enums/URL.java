@@ -9,6 +9,9 @@ public enum URL {
 
     /**
      * 1)获取账户余额
+     * 2)获取账户下对应产品类型的正常状态业务
+     * 3)获取对应省份下的可用代理城市
+     *
      *
      * 2)提取动态代理
      * 2.1)动态代理--提取动态代理IP
@@ -24,6 +27,7 @@ public enum URL {
      */
     USERS_GETBALANCE("/users/getbalance"),
     USERS_GETALLORDERS("/users/getAllOrders"),
+    USERS_GETCITY("/users/getCity"),
     DYNAMIC_GETIPS("/dynamic/getips"),
     DYNAMIC_CHECK("/dynamic/check"),
     DYNAMIC_SETWHITEIP("/dynamic/setwhiteip"),
@@ -39,6 +43,7 @@ public enum URL {
 
 //    private static final String DOMAIN = "http://127.0.0.1:8087";
     private static final String DOMAIN = "https://v1.api.juliangip.com";
+    //private static final String DOMAIN = "http://192.168.10.60:8087";
 
     private String value;
 
