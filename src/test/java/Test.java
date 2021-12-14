@@ -9,11 +9,11 @@ public class Test {
     private String userId = "your User ID";
     private String AccessKey = "User AccessKey";
 
-    private String dynamicKey = "63dc5565bf4b449990e6f3f6f17a2883";
-    private String dynamicTradeNo = "1358211746619020";
+    private String dynamicKey = "your TradeNo AccessKey";
+    private String dynamicTradeNo = "your TradeNo";
 
-    private String aloneTradeNo = "aloneTradeNo";
-    private String aloneKey = "aloneKey";
+    private String aloneTradeNo = "your TradeNo";
+    private String aloneKey = "your TradeNo AccessKey";
 
 
     /**
@@ -29,7 +29,7 @@ public class Test {
 
     @org.junit.jupiter.api.Test
     public void usersGetAllOrders() throws IllegalAccessException {
-        String orderList = JuLiang.getAllOrders(new UsersGetAllOrders().setKey(AccessKey).setUser_id(userId).setProduct_type(4));
+        String orderList = JuLiang.getAllOrders(new UsersGetAllOrders().setKey(AccessKey).setUser_id(userId).setProduct_type(4).setShow(1));
         System.out.println(orderList);
     }
 

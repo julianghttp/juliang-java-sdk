@@ -23,5 +23,9 @@ public class UsersGetAllOrders {
      * 产品类型
      */
     private Integer product_type;
+    /**
+     * 是否显示密钥
+     */
+    private Integer show;
 
 }

@@ -37,6 +37,7 @@ public enum URL {
     ALONE_REPLACEWHITEIP("/alone/replaceWhiteIp");
 
 
+//    private static final String DOMAIN = "http://127.0.0.1:8087";
     private static final String DOMAIN = "https://v1.api.juliangip.com";
 
     private String value;
